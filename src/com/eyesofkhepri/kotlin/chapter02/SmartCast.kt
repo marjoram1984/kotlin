@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
 }
 
 interface Expr
+
 // value라는 프로퍼티만 존재하는 단순한 클래스이며 Expr인터페이스를 구현한다.
 class Num(val value: Int): Expr
 // Expr 타입의 객체를 프로퍼티로 받고 있으며 Num이나 Sum을 인자로 사용할 수 있다.
@@ -31,7 +32,7 @@ fun eval(e: Expr): Int {
 // if 자체가 식이니 리턴문과 중괄호를 없에서 간단히 사용할 수 있다.
 fun eval2(e: Expr): Int =
         if(e is Num) {
-            e.value
+            e.value // 가장 마지막 행이 결과값이다.
         } else if(e is Sum) {
             eval2(e.right) + eval(e.left)
         } else {

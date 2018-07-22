@@ -26,6 +26,5 @@ fun readNumber2(reader: BufferedReader) {
     var number = try {
         Integer.parseInt(reader.readLine())
     } catch(e: NumberFormatException) {
-        return
     }
 }

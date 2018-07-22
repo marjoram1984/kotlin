@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
 
     mapLoop()
     arrayLoopWithIndex()
+    loopwhile1();
 }
 
 fun fizzBuzz(i: Int) = when {
@@ -47,3 +48,15 @@ fun arrayLoopWithIndex() {
     }
 }
 
+fun loopwhile1() {
+    println("while반복")
+    var i = 0;
+    while(i < 10) {
+        println(++i);
+    }
+
+    i = 0;
+    do{
+        println(++i)
+    } while(i < 10)
+}
